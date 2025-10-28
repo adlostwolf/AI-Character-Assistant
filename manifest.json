@@ -1,0 +1,11 @@
+{
+    "display_name": "AI Character Assistant",
+    "loading_order": 1,
+    "js": "index.js",
+    "css": "style.css",
+    "author": "GitHub Copilot",
+    "version": "1.0.0",
+    "homePage": "https://github.com/adlostwolf/AI-Character-Assistant",
+    "auto_update": false,
+    "minimum_client_version": "1.10.0"
+}
