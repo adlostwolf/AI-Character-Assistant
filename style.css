@@ -1,0 +1,53 @@
+.ai-char-assistant-panel {
+    padding: 20px;
+    background: var(--SmartThemeBodyColor);
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.ai-char-field {
+    margin-bottom: 15px;
+}
+
+.ai-char-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.ai-char-field textarea,
+.ai-char-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 4px;
+    background: var(--SmartThemeBlurTintColor);
+    color: var(--SmartThemeBodyTextColor);
+}
+
+.ai-char-field button {
+    margin-top: 5px;
+    padding: 6px 12px;
+    background: var(--SmartThemeQuoteColor);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ai-char-field button:hover {
+    opacity: 0.8;
+}
+
+.ai-char-export {
+    margin-top: 20px;
+}
+
+.ai-char-export button {
+    padding: 10px 20px;
+    background: var(--SmartThemeMainColor);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
