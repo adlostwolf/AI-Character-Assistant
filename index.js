@@ -34,33 +34,43 @@ function addPanel() {
         </div>
         <div class="ai-char-field">
             <label for="char-description">Description:</label>
-            <textarea id="char-description" rows="3" placeholder="Brief description"></textarea>
-            <button onclick="aiFill('description')">AI Fill</button>
-            <button onclick="aiImprove('description')">AI Improve</button>
+            <textarea id="char-description" rows="2" placeholder="Brief description"></textarea>
+            <div class="button-row">
+                <button onclick="aiFill('description')">AI Fill</button>
+                <button onclick="aiImprove('description')">AI Improve</button>
+            </div>
         </div>
         <div class="ai-char-field">
             <label for="char-personality">Personality:</label>
-            <textarea id="char-personality" rows="5" placeholder="Personality traits"></textarea>
-            <button onclick="aiFill('personality')">AI Fill</button>
-            <button onclick="aiImprove('personality')">AI Improve</button>
+            <textarea id="char-personality" rows="3" placeholder="Personality traits"></textarea>
+            <div class="button-row">
+                <button onclick="aiFill('personality')">AI Fill</button>
+                <button onclick="aiImprove('personality')">AI Improve</button>
+            </div>
         </div>
         <div class="ai-char-field">
             <label for="char-scenario">Scenario:</label>
-            <textarea id="char-scenario" rows="3" placeholder="Starting scenario"></textarea>
-            <button onclick="aiFill('scenario')">AI Fill</button>
-            <button onclick="aiImprove('scenario')">AI Improve</button>
+            <textarea id="char-scenario" rows="2" placeholder="Starting scenario"></textarea>
+            <div class="button-row">
+                <button onclick="aiFill('scenario')">AI Fill</button>
+                <button onclick="aiImprove('scenario')">AI Improve</button>
+            </div>
         </div>
         <div class="ai-char-field">
             <label for="char-first-mes">First Message:</label>
-            <textarea id="char-first-mes" rows="3" placeholder="First message from character"></textarea>
-            <button onclick="aiFill('first_mes')">AI Fill</button>
-            <button onclick="aiImprove('first_mes')">AI Improve</button>
+            <textarea id="char-first-mes" rows="2" placeholder="First message from character"></textarea>
+            <div class="button-row">
+                <button onclick="aiFill('first-mes')">AI Fill</button>
+                <button onclick="aiImprove('first-mes')">AI Improve</button>
+            </div>
         </div>
         <div class="ai-char-field">
             <label for="char-mes-example">Message Example:</label>
-            <textarea id="char-mes-example" rows="5" placeholder="Example dialogue"></textarea>
-            <button onclick="aiFill('mes_example')">AI Fill</button>
-            <button onclick="aiImprove('mes_example')">AI Improve</button>
+            <textarea id="char-mes-example" rows="3" placeholder="Example dialogue"></textarea>
+            <div class="button-row">
+                <button onclick="aiFill('mes-example')">AI Fill</button>
+                <button onclick="aiImprove('mes-example')">AI Improve</button>
+            </div>
         </div>
         <div class="ai-char-field">
             <label for="char-tags">Tags:</label>
@@ -100,10 +110,10 @@ async function aiFill(field) {
         case 'scenario':
             prompt = `Generate a starting scenario for a roleplay with a character named ${name}. ${currentValue ? 'Based on: ' + currentValue : ''}`;
             break;
-        case 'first_mes':
+        case 'first-mes':
             prompt = `Generate the first message from a character named ${name} in a roleplay. ${currentValue ? 'Incorporate: ' + currentValue : ''}`;
             break;
-        case 'mes_example':
+        case 'mes-example':
             prompt = `Generate example dialogue for a character named ${name}. ${currentValue ? 'Include style: ' + currentValue : ''}`;
             break;
         case 'tags':
@@ -146,10 +156,10 @@ async function aiImprove(field) {
         case 'scenario':
             prompt = `Improve and expand this scenario for a character named ${name}: "${currentValue}". Make it more detailed and engaging.`;
             break;
-        case 'first_mes':
+        case 'first-mes':
             prompt = `Improve and expand this first message for a character named ${name}: "${currentValue}". Make it more detailed and engaging.`;
             break;
-        case 'mes_example':
+        case 'mes-example':
             prompt = `Improve and expand this example dialogue for a character named ${name}: "${currentValue}". Make it more detailed and engaging.`;
             break;
         case 'tags':

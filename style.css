@@ -1,53 +1,79 @@
 .ai-char-assistant-panel {
-    padding: 20px;
-    background: var(--SmartThemeBodyColor);
-    border-radius: 8px;
-    margin: 10px 0;
+    padding: 10px;
+    margin: 5px 0;
 }
 
 .ai-char-field {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .ai-char-field label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: calc(var(--mainFontSize) * 0.9);
+    font-weight: 600;
+    opacity: 0.8;
+    margin: 0;
 }
 
 .ai-char-field textarea,
-.ai-char-field input {
+.ai-char-field input[type="text"] {
     width: 100%;
-    padding: 8px;
+    padding: 6px;
     border: 1px solid var(--SmartThemeBorderColor);
-    border-radius: 4px;
-    background: var(--SmartThemeBlurTintColor);
-    color: var(--SmartThemeBodyTextColor);
+    border-radius: 5px;
+    background: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+    font-family: var(--mainFontFamily);
+    font-size: calc(var(--mainFontSize) * 0.9);
+    resize: vertical;
+    min-height: 2em;
+}
+
+.ai-char-field textarea {
+    min-height: 3em;
+}
+
+.ai-char-field .button-row {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 
 .ai-char-field button {
-    margin-top: 5px;
-    padding: 6px 12px;
-    background: var(--SmartThemeQuoteColor);
-    color: white;
-    border: none;
-    border-radius: 4px;
+    padding: 4px 10px;
+    background: transparent;
+    color: var(--SmartThemeBodyColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 5px;
     cursor: pointer;
+    font-size: calc(var(--mainFontSize) * 0.85);
+    transition: var(--animation-duration);
+    white-space: nowrap;
 }
 
 .ai-char-field button:hover {
-    opacity: 0.8;
+    background: var(--black50a);
+    filter: brightness(1.2);
 }
 
 .ai-char-export {
-    margin-top: 20px;
+    margin-top: 15px;
+    text-align: center;
 }
 
 .ai-char-export button {
-    padding: 10px 20px;
-    background: var(--SmartThemeMainColor);
-    color: white;
-    border: none;
-    border-radius: 4px;
+    padding: 8px 20px;
+    background: var(--SmartThemeBorderColor);
+    color: var(--SmartThemeBodyColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
+    transition: var(--animation-duration);
+}
+
+.ai-char-export button:hover {
+    filter: brightness(1.3);
 }
